@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>戏捅宝石学测试题v1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<meta name="msapplication-tap-highlight" content="no" />
+
+</head>
+<style>
+        .guide{
+            margin-left:-10px !important;
+        }
+        ul{
+            background:#f00;
+        }
+		li{
+			background:#fff;	
+		}
+		.cf{
+			background:#000;
+		}
+</style>
+<script>
+var lhref=window.location.href.split('/');
+lhref[lhref.length-1] = '';
+var shref=lhref.join('/');
+var _http = shref;
+var loadScript = function(url,callback) {
+	var head = document.head || document.getElementsByTagName("head")[0] || document.documentElement,
+script,options;
+	if(typeof url === "object"){
+		options = url;
+		url = undefined;
+	}
+	s = options || {};
+	url = url || s.url;
+	callback = callback || s.success;
+	script = document.createElement("script");
+	script.async = s.async || false;
+	script.type = "text/javascript";
+	if (s.charset) {
+		script.charset = s.charset;
+	}
+	if(s.cache === false){
+		url = url+( /\?/.test( url ) ? "&" : "?" )+ "_=" +(new Date()).getTime();
+	}
+	script.src = url;
+	head.insertBefore(script, head.firstChild);
+	if(callback){
+		document.addEventListener ? script.addEventListener("load", callback, false) : script.onreadystatechange = function() {
+			if (/loaded|complete/.test(script.readyState)) {
+				script.onreadystatechange = null
+				callback()
+			}
+		}
+	}
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/wap.css">
+<body>
+<span style="color:#fff; height:60px; line-height:60px; width:100%;" id="debug">
+	<a href="#">点击开始</a>
+</span>
+<div class="slide-panel cf" id="wrap">
+  <div id="slide" class="slide" style="height: 1016px;">
+      <ul id="slide_ul" class="cf">
+          <li class="features" style="height: 1016px; opacity: 1;" id="index">
+          	<div class="content">
+            	<div class="layer" data-depth="0.1" id="page_1">
+                	<img src="images/a1.png" width="277" height="75">
+                	<img src="images/a3.png" width="150" height="74">
+                    <img src="images/gem.png" width="200" height="125">
+                </div>
+            </div>
+          </li>
+   	</ul>
+    <div id="guide" class="guide" style="display: block;"></div>
+    <div id="popwin" class="popwin" style="height: 1016px;"></div>
+    <div id="result">&nbsp;</div>
+  </div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/slide.js"></script>
+<script src="js/animate.js"></script>
+<script>
+var result = [
+{title:'3L44L36L29PC跟以下那种宝石有关？',answers:[
+		'蓝宝石',
+		'钻石',
+		'红宝石',
+		'猫眼'
+	],result:1,info:'3个4次对称轴(L4)，4个3次对称轴(L3)，6个2次对称轴(L2)，9个对称面(P)，一个对称中心(C)，等轴晶系的最高对称型，果断是D，钻石'},
+{
+	title:'测试技术哪家强？',answers:[
+		'山东蓝翔',
+		'北大青鸟',
+		'新东方',
+		'中国地质大学珠宝学院'
+	],result:3,info:'挖掘机技术哪家强？中国山东找蓝翔;......测试技术哪家强，中国武汉找地大，答案就是D.中国地质大学珠宝学院'},
+{
+	title:'老坑玻璃种是什么意思？',answers:[
+		'顶级翡翠',
+		'一种玻璃',
+		'用来坑人的一种宝石',
+		'祖母绿的一个品种'
+	],result:0,info:'不会有人真的猜一种玻璃吧？圈内圈外人士应该都听说过老坑玻璃种翡翠，答案是A.顶级翡翠'},
+{
+	title:'已知Apple Watch采用了合成蓝宝石表面，以下描述不正确的是？',answers:[
+		'买买买',
+		'莫氏硬度高达9',
+		'价格会很贵',
+		'等轴晶系'
+	],result:3,info:'Apple Watch表面用的是合成蓝宝石材料，六方晶系，所以不正确的应该是D.等轴晶系'},
+{
+	title:'一纤瘦的女生走进人很少的电梯，却被提示超重，请问为什么？',answers:[
+		'电梯坏了',
+		'人品不好',
+		'怪我咯',
+		'她手上拿了《系统宝石学》'
+	],result:3,info:'据网友@ATStalker 考证，《系统宝石学》第2版，页数有710页，所以，答案是D....'},
+{
+	title:'第一次使用手持分光镜看钻石，会看到什么？',answers:[
+		'415.5nm特征吸收线',
+		'一道彩虹',
+		'blingbling',
+		'一片漆黑'
+	],result:1,info:'第一次使用分光镜，一般都无法适应这么微弱的吸收谱线或特征发射谱线，通常看到一道彩虹'},
+{
+	title:'钻石分级中，VS指？',answers:[
+		'Victoria\'s Secret',
+		'Very Stupid',
+		'比较，类似PK',
+		'Very Slightly'
+	],result:3,info:'VS是净度分级的指标，非常细小的瑕疵，肉眼不可见，10倍放大镜下可见'},
+{
+	title:'一枚1克拉重，VVS，3EX，D色的钻石大约能买多少部iPhone6？',answers:[
+		'1部',
+		'5部',
+		'20部',
+		'1000部'
+	],result:2,info:'大约是20部，但有同学表示，可恶的黄牛抬高了iPhone6的价格，所以这题的答案略微有瑕疵～'},
+{
+	title:'上一题中，EX指？',answers:[
+		'Excellent',
+		'前男友',
+		'额外价值',
+		'一个韩国组合'
+	],result:0,info:'3EX指切工分级中的最高级别Excellent,翻译成前男友神马的，自觉面壁思过'},
+{
+	title:'蓝宝石是什么颜色的?',answers:[
+		'蓝色',
+		'红色',
+		'绿色',
+		'以上都有'
+	],result:3,info:'蓝宝石一定是蓝色的嘛？no no no，各种颜色都可以有～'},
+{
+	title:'邓紫棋《泡沫》中唱到：『阳光下的泡沫，是彩色的』。以下现象与之原理相同的是？',answers:[
+		'钻石的火彩',
+		'欧泊变彩',
+		'各色蓝宝石',
+		'水色气息'
+	],result:3,info:'能坚持到这一题还没有阵亡的同学，都是高手！这题小编也不知道答案，哈哈哈哈，满分拿去～'}
+];
+var slide = null;
+var imgIndex = 0;		//当前图片
+	$(document).ready(function(e) {
+		loadScript({"url":_http + "js/parallax.js","async":false,"charset":"utf-8","success":function(){
+			var scene = document.getElementById('slide');
+			var parallax = new Parallax(scene);
+		}});
+		init_1();
+
+		$("#debug").click(function(e){
+			$(this).animate({opacity:0},300).hide();
+			slide.playNext();
+			return false;
+		});
+		
+		$("li > article").click(function(e) {
+			check($(this).parent().index() - 1,$(this).index() - 1);
+        });
+    });
+	
+	function check(index_1,index_2){
+		if(result[index_1].result == index_2){
+			show(result[index_1].info,true);
+		}else{
+			//回答错误
+			show(result[index_1].info,false);
+		}
+	}
+	function show(info,isRight){
+		var _result = "";
+		
+		$("#result").animate({opacity:0},0).show();
+		if(isRight){
+			_result = "回答正确：<br />&nbsp;&nbsp;&nbsp;&nbsp;" + info;
+			$("#result").html(_result);
+			$("#result").animate({opacity:1},300).animate({opacity:1},1000).animate({opacity:0},300,function(){
+				$(this).hide();
+				slide.playNext();
+			});
+		}else{
+			_result = "回答错误：<br />&nbsp;&nbsp;&nbsp;&nbsp;" + info;
+			$("#result").html(_result);
+			$("#result").animate({opacity:1},300).animate({opacity:1},1000).animate({opacity:0},300,function(){
+				//触发错误和分享逻辑
+			});
+		}
+	}
+	function init(n){
+		var lis = $("li.features");
+		var _li = lis[n];
+		var items = $(_li).find("article");
+		var height = $(_li).find("span").height();
+		flyTo($(items[0]),{x:10,y:height + 5},"center",600,200);
+		flyTo($(items[1]),{x:10,y:height + 80},"center_right",600,200);
+		flyTo($(items[2]),{x:10,y:height + 155},"center",600,200);
+		flyTo($(items[3]),{x:10,y:height + 230},"center_right",600,200);
+		
+		
+	}
+	function init_1(){
+		for(var i = 0 ; i < result.length ; i ++){
+			var _item = result[i];
+			var _title = _item.title;
+			var _answers = _item.answers;
+			var _li = $("<li></li>").addClass("features").addClass("mountain");
+			$("<span></span>").html(_title).appendTo(_li);
+			for(var j = 0 ; j < _answers.length ; j ++){
+				$("<article></article>").html(_answers[j]).appendTo(_li);
+			}
+			$(_li).appendTo("ul.cf");
+			
+			$("<div></div>").addClass("layer").attr("data-depth","0.1").html('<img src="images/m2.png" width="240" height="120" class="m4">').appendTo(_li);
+			$("<div></div>").addClass("layer").attr("data-depth","0.2").html('<img src="images/m2.png" width="200" height="100" class="m3">').appendTo(_li);
+			$("<div></div>").addClass("layer").attr("data-depth","0.3").html('<img src="images/m1.png" width="300" height="150" class="m2">').appendTo(_li);
+			$("<div></div>").addClass("layer").attr("data-depth","0.4").html('<img src="images/m1.png" width="200" height="100" class="m1">').appendTo(_li);
+		}
+		slide = new Slide("slide","slide_ul");
+		slide.init();
+		window.onresize = function(){
+		  slide.resize();
+		}
+		var items = $("#page_1").find("img");
+		var _cx = pageWidth() / 2;
+		flyTo($(items[0]),{x:_cx - 130,y:10},"center",400,100);
+		flyTo($(items[1]),{x:70,y:110},"center",400,300);
+		flyTo($(items[2]),{x:10,y:210},"center",400,500);
+	}
+	
+</script>
+</html>

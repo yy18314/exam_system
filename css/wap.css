@@ -1,0 +1,142 @@
+ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;list-style: none;}
+body {font-family: Arial, Helvetica,"\5FAE\8F6F\96C5\9ED1";-webkit-text-size-adjust:100%;background: #cf0;color: #666;-webkit-backface-visibility: hidden;backface-visibility: hidden;}
+
+.content{ position:relative; width:100%; height:100%; display:block;}
+.content .layer:first-child{ position:fixed; left:100px; top:100px; background:url(../images/bg2.png) center 15px no-repeat; background-size:320px auto;}
+.content .layer:last-child{position:fixed; left:110px; top:100px; background:url(../images/bg1.png) center 15px no-repeat; background-size:320px auto;}
+.content .layer#page_1{position:fixed; left:30px; top:0px; background:none;}
+.content .layer#page_1 img{ position:absolute; left:-300px; top:100px;}
+.mountain .layer{ position:absolute; z-index:10001!important;}
+.mountain .layer .m1{ position:absolute; bottom:-40px; left:-30px;}
+.mountain .layer .m2{ position:absolute; bottom:-70px; left:30px;}
+.mountain .layer .m3{ position:absolute; bottom:-40px; left:10px;}
+.mountain .layer .m4{ position:absolute; bottom:-40px; left:160px;}
+
+
+#debug{ position:fixed; bottom:30px; width:100%; height:60px; z-index:10008;}
+#debug a{
+display:block; width:140px; height:40px; line-height:40px; text-align:center; background:#fff; margin:auto; font-size:20px;
+	    -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+   -moz-box-shadow:0px 5px 0px #ffd800;              
+    -webkit-box-shadow:0px 5px 0px #ffd800;            
+    box-shadow:0px 5px 0px #ffd800;   	
+}
+
+/*clear*/
+.cf:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+a{color: #666;text-decoration: none;}
+
+/*slide-start*/
+.slide{position: relative;float: left;width: 100%;height:100%;overflow: hidden;}
+.slide ul{}
+.slide li{
+	list-style:none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display:block;
+  width: 100%;
+  background-size:100% auto;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  -webkit-transition: transform .3s ease-in-out;
+  opacity: 0;
+  z-index:10009;
+}
+.slide li > img{ display:block; margin:auto;}
+.slide-panel{position: relative;}
+.slide .slide-img{position: absolute;top: 50%;left: 12px;margin-top: -44px;}
+.slide .slide-title{position: absolute;top: 27px;left: 91px;color: #01a8f2;}
+.slide .slide-text{position: absolute;top: 48px;left: 91px;font-size: 10px;line-height: 21px;}
+.slide .slide-point{width: 100%;text-align: center;height: 20px;position: absolute;bottom: 0px;left: 0;font-size: 0;background: rgba(255,255,255,.55);}
+.slide .slide-point span{width: 5px;height: 5px;border-radius: 50%;background: #95b99d;margin: 9px 7px 0;display: inline-block;}
+.slide .slide-point span.current{background: #f60;}
+/*slide-end*/
+.features{ background:url(../images/bg0.png) center no-repeat;}
+
+.features > span{ width:100%; display:block; clear:both; height:auto; line-height:40px; color:#fff; text-align:center; font-size:18px;}
+.features > article{ width:270px; height:40px; line-height:40px; display:block; background:#fff; padding:10px 0 0 0px; position:absolute;color:#000; text-align:left;right:100%; z-index:100010; text-indent:1.5em;
+    -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+   -moz-box-shadow:0px 5px 0px #ffd800;              
+    -webkit-box-shadow:0px 5px 0px #ffd800;            
+    box-shadow:0px 5px 0px #ffd800;  
+}
+
+#result{ position:fixed; left:20px; right:20px; top:40px; bottom:40px; background:rgba(255,255,255,0.95); z-index:100030; display:none; padding:10px; color:#000;
+    -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+   -moz-box-shadow:0px 5px 0px #ffd800;              
+    -webkit-box-shadow:0px 5px 0px #ffd800;            
+    box-shadow:0px 5px 0px #ffd800;  
+}
+
+#index a{ display:block; width:100px; height:30px; line-height:30px; text-align:center; background:#fff; margin:auto;
+	    -moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+   -moz-box-shadow:0px 5px 0px #ffd800;              
+    -webkit-box-shadow:0px 5px 0px #ffd800;            
+    box-shadow:0px 5px 0px #ffd800;   
+}
+
+#work > img.item{ position:absolute; left:-100px; top:-100px;}
+#edu > article > section{ font-size:16px; color:#266745;}
+#edu > article > footer{ position:absolute; right:0; top:5px; font-size:30px; color:#000; width:70px; height:60px; line-height:60px; text-align:center; }
+.round{
+	-moz-border-radius: 5px;      /* Gecko browsers */
+    -webkit-border-radius: 5px;   /* Webkit browsers */
+    border-radius:5px;            /* W3C syntax */
+}
+#work_list{ position:absolute; top:90px; bottom:60px; left:40px;right:
+40px; background:#fff; display:block; padding-top:10px;
+   -moz-box-shadow:0px 5px 0px #99b218;              
+    -webkit-box-shadow:0px 5px 0px #99b218;            
+    box-shadow:0px 5px 0px #99b218;   
+}
+
+.guide{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -7px;
+  width: 15px;
+  height: 15px;
+
+  border-bottom: 3px solid #afb0ba;
+  border-right: 3px solid #afb0ba;
+  -webkit-animation: guide-ac 2s ease infinite;
+  -webkit-transform: rotate(45deg);
+  z-index: 100;
+}
+@-webkit-keyframes guide-ac {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+.popwin{
+  display: none;
+  width: 100%;
+  background: url(../images/popwin.png) no-repeat 50% 35px, rgba(0,0,0,.8);
+  background-size: 270px 114px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.video{
+  position: absolute;
+  top:33%;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  font-size: 0;
+  background:url(../images/video.jpg) no-repeat 0 50%/cover;
+}
+.video img{
+  width: 100%;
+}
